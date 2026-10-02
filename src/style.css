@@ -1,0 +1,182 @@
+/* WARGYM Global Styles */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  line-height: 1;
+}
+
+.btn-primary {
+  background-color: #ff5540;
+  color: #000;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+}
+.btn-primary:hover {
+  background-color: #fff;
+  color: #ff5540;
+  box-shadow: 0 0 20px rgba(255, 85, 64, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2rem;
+}
+.btn-secondary:hover {
+  background-color: rgba(255, 85, 64, 0.15);
+  border-color: #ff5540;
+  color: #ff5540;
+  transform: translateY(-2px);
+}
+
+.glass-panel {
+  background: linear-gradient(135deg, rgba(31, 31, 31, 0.72), rgba(14, 14, 14, 0.48));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  transition: all 0.3s ease;
+}
+.glass-panel:hover {
+  border-color: rgba(255, 85, 64, 0.5);
+  box-shadow: 0 10px 40px rgba(255, 85, 64, 0.1);
+  transform: translateY(-4px);
+}
+
+.glass-tile {
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: border-color 0.25s ease, background 0.25s ease, transform 0.25s ease;
+}
+.glass-tile:hover {
+  background: rgba(255, 255, 255, 0.085);
+  border-color: rgba(255, 85, 64, 0.52);
+  transform: translateY(-2px);
+}
+
+.metal-grid {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.hero-vignette {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.nav-link {
+  position: relative;
+  padding-bottom: 6px;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #ff5540;
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: #1f1f1f;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  padding: 0.5rem 0;
+}
+.dropdown-menu a {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: #e2e2e2;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.2s ease;
+}
+.dropdown-menu a:hover {
+  background-color: rgba(255, 85, 64, 0.1);
+  color: #ff5540;
+  padding-left: 1.75rem;
+  border-left: 2px solid #ff5540;
+}
+
+.footer-link {
+  color: #e2e2e2;
+  transition: color 0.2s ease;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.footer-link:hover {
+  color: #ff5540;
+}
+
+.filter-btn {
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  color: #fff;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+}
+@media (min-width: 640px) {
+  .filter-btn {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    padding: 0.5rem 1.5rem;
+  }
+}
+.filter-btn.active,
+.filter-btn:hover {
+  border-color: #ff5540;
+  background: rgba(255, 85, 64, 0.1);
+  color: #ff5540;
+}
+
+/* Page transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
