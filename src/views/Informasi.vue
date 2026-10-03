@@ -40,8 +40,9 @@
         </div>
     </section>
 
-    <!-- Section 2: Pricing -->
-    <section class="py-16 bg-[#131313] border-b border-white/10 relative">
+    <!-- Section 2: Pricing / Daftar Harga -->
+    <section id="daftar-harga" class="py-16 bg-[#131313] border-b border-white/10 relative scroll-mt-20">
+        <div id="membership" class="absolute -top-20"></div>
         <div class="max-w-screen-2xl mx-auto px-6 md:px-16">
             <div class="mb-12 text-center">
                 <h2 class="font-headline-md text-3xl uppercase tracking-wider text-white">DAFTAR HARGA</h2>
@@ -205,3 +206,31 @@
     </section>
 </main>
 </template>
+
+<script setup>
+import { onMounted, watch, nextTick } from 'vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+
+const scrollToHash = () => {
+  if (route.hash) {
+    nextTick(() => {
+      setTimeout(() => {
+        const el = document.querySelector(route.hash)
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' })
+        }
+      }, 100)
+    })
+  }
+}
+
+onMounted(() => {
+  scrollToHash()
+})
+
+watch(() => route.hash, () => {
+  scrollToHash()
+})
+</script>

@@ -28,8 +28,7 @@
         </template>
       </nav>
 
-      <div class="flex items-center gap-4">
-        <a href="https://app.wargym.id/member/login" class="btn-primary text-xs px-4 py-2 hidden lg:flex">Masuk</a>
+      <div class="flex items-center">
         <!-- Mobile Menu Button -->
         <button @click="mobileMenuOpen = true" class="lg:hidden text-white hover:text-brand-red transition-colors focus:outline-none">
           <span class="material-symbols-outlined text-3xl">menu</span>
@@ -73,10 +72,6 @@
                 </template>
               </div>
             </template>
-
-            <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
-              <a href="https://app.wargym.id/member/login" class="btn-primary text-center w-full">Masuk Member</a>
-            </div>
           </div>
         </div>
       </transition>
@@ -100,13 +95,6 @@ const navItems = [
       { title: 'Informasi', url: '/informasi' },
     ]
   },
-  {
-    title: 'TUTORIAL', url: null, id: 'tutorial',
-    children: [
-      { title: 'Gym Equipment Guide', url: '/tutorial' },
-      { title: 'Workout Plans', url: '/tutorial' },
-    ]
-  },
   { title: 'FASILITAS', url: '/fasilitas', id: 'fasilitas' },
   { title: 'TEAM KITA', url: '/team', id: 'team' },
   { title: 'KONTAK', url: '/contact', id: 'contact' },
@@ -116,7 +104,6 @@ function isActive(id) {
   const nameMap = {
     home: ['home'],
     service: ['informasi', 'personal-trainer'],
-    tutorial: ['tutorial'],
     fasilitas: ['fasilitas'],
     team: ['team'],
     contact: ['contact'],

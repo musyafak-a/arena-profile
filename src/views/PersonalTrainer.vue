@@ -27,11 +27,7 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
                         <h3 class="absolute bottom-1 sm:bottom-3 left-2 sm:left-4 font-headline-md text-sm sm:text-2xl text-white uppercase tracking-wider m-0">{{ trainer.name }}</h3>
                     </div>
-                    <p class="font-body-md text-[9px] sm:text-[13px] leading-snug sm:leading-relaxed text-on-surface-variant flex-grow mb-3 sm:mb-6 line-clamp-4 sm:line-clamp-none">{{ trainer.desc }}</p>
-                    <div class="pt-2 sm:pt-4 border-t border-white/10 mt-auto flex items-center gap-1 sm:gap-2">
-                        <span class="material-symbols-outlined text-brand-red text-[12px] sm:text-[16px]">location_on</span>
-                        <span class="font-label-caps text-[7px] sm:text-[10px] font-bold text-white uppercase tracking-widest leading-none">WARGYM<span class="hidden sm:inline"> JOMBANG</span></span>
-                    </div>
+                    <p class="font-body-md text-[9px] sm:text-[13px] leading-snug sm:leading-relaxed text-on-surface-variant flex-grow line-clamp-4 sm:line-clamp-none">{{ trainer.desc }}</p>
                 </div>
             </div>
         </div>
